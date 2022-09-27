@@ -1,0 +1,111 @@
+@mixin filter($filter) {
+   -webkit-filter: $filter;
+   -moz-filter: $filter;
+   -o-filter: $filter;
+}
+
+.gallery {
+
+	display: block;
+	text-align: center;
+	overflow: hidden; 
+
+	&-logo {
+		img {
+			width: 100%;
+			max-height: 300px;
+		}
+	}
+
+	&-section {
+
+		width: 100%;
+	    position: relative;
+	    margin-top: 75px;
+	    min-height: 350px;
+	    overflow: hidden;
+
+	    @include atMedium {
+	    	min-height: 200px;
+	    }
+
+	    @include atSmall {
+	    	min-height: 100px;
+	    }
+	   
+	   .left, .middle, .right {
+	   	  position: absolute;
+	      width:33.333%;
+	      height: 100% !important;
+	      left: 33.33%;
+	      transition: 0.5s ease-in-out all;
+	      
+	      @include atSmall {
+	         width: 100%;
+	         position: relative;
+	         font-size:0.9em;
+	      }
+	   }
+	   
+	   &.animate {
+	      .left {
+	         left:0;
+	      }
+	      
+	      .right {
+	         left:66.66%;
+	         
+	         @include atSmall {
+	            left: 0;
+	         }
+	      }
+	   }
+	   
+	   .title {
+	      background: tomato;
+	      display: flex;
+	      align-items: center !important;
+	      color: #fff;
+	      justify-content: center;
+	      
+	      h2 {
+	         margin-top:10px;
+	      }
+	      
+	      p {
+	         line-height:1.55em;
+	         margin-top:10px;
+	         margin-bottom: 10px;
+	      }
+	   }
+	   
+	   .tiles {
+	      img {
+	      	 display:block;
+	         width: 100%;
+	         height: 100% !important;
+	         opacity: 0.7;
+	         transition: 0.5s ease-in-out all;
+	         @include filter(grayscale(100%)); 
+	         
+	         
+	         &:hover {
+	            opacity:1;
+	            @include filter(grayscale(0%));
+	         }
+	      }
+	   }
+	   
+	   .middle {
+	   	  z-index: 20; 
+	   	  @include atSmall {
+	         	left: 0;
+	      }
+	      img {
+	         width: 100%;
+	         height: 100% !important;
+	         display:block;
+	      }
+	   }
+	}
+}

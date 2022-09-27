@@ -1,0 +1,76 @@
+@mixin work-components {
+		&-text {
+		opacity: 0;
+		animation-duration: 1.5s;
+		animation-fill-mode: forwards;
+		width: 25%;
+		height: auto;
+
+		hr {
+			margin: 0;
+			border: none;
+		    height: 2px;
+		}
+
+		h5 {
+			font-size: 12px;
+			text-transform: uppercase;
+			margin-bottom: 5px;
+		}
+
+		p {
+			font-size: 10px;
+			margin-top: 5px;
+		}
+
+		@include atSmall {
+			width: 100%;
+		}
+	}
+
+	&-image-big {
+		img {
+			width: 74.99%;
+			min-height: 500px;
+			cursor: pointer;
+		}
+
+		&:hover {
+			img {
+				animation-name: ImageHoverBig;
+				animation-duration: 0.5s;
+				animation-fill-mode: forwards;
+			}
+		}
+
+		@include atSmall {
+			img {
+				min-height: 0;
+				height: 100%;
+			}
+		}
+	}
+
+	&-image-small {
+		img {
+			width: 20%;
+			transform: scale(1.5);
+			cursor: pointer;
+		}
+
+		&:hover {
+			img { 
+				animation-name: ImageHoverSmall;
+				animation-duration: 0.5s;
+				animation-fill-mode: forwards;
+			}
+		}
+
+		@include atSmall {
+			img {
+				width: 20%;
+				margin: 10% auto;
+			}
+		}
+	}
+}

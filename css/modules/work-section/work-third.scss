@@ -1,0 +1,31 @@
+@mixin work-third {
+	&-text-third {
+		@extend .work-content-text;
+		animation-name: textFadeInRight;
+		position: absolute;
+		bottom: 50px;
+		left: 0;
+
+		@include atMedium {
+			position: static;
+			float: left;
+		}
+	}
+
+	&-image-big-third {
+		@extend .work-content-image-big;
+		img {
+			float: right;
+		}
+	}
+
+	&-image-small-third {
+		@extend .work-content-image-small;
+		img {
+			float: left;
+			transform-origin: 0 0;
+			margin: 15% auto;
+			box-sizing: border-box;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+/* Media Query Mixins */
+@mixin atSmall {
+	@media only screen and (max-width: 600px) {
+		@content;
+	}
+}
+
+@mixin atMedium {
+	@media only screen and (max-width: 1239px) {
+		@content;
+	}
+}
+
+@mixin atLarge {
+	@media only screen and (min-width: 1240px) {
+		@content;
+	}
+}
+
+@mixin defPadding {
+	padding-right: 25%;
+	padding-left: 25%;
+
+	@include atMedium {
+		padding-right: 15%;
+		padding-left: 15%;
+	}
+
+	@include atSmall {
+		position: relative;
+		padding: 0 auto; 
+	}
+}

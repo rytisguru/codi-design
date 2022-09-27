@@ -1,0 +1,43 @@
+/* Site Navigation */
+.site-nav {
+	float: right;
+	a {
+		display: inline-block;
+		color: #fff;
+		padding: 10px 20px;
+		border-radius: 16px;
+		box-sizing: border-box;
+		text-align: center;
+		white-space: nowrap;
+		cursor: pointer;
+
+		&.active {
+		  background: #00c2cb;
+		  color: #42455a;
+		  transition: 0.5s ease-out;
+		  letter-spacing: 2px;
+		}
+
+		&:last-child {
+			background-color: #000;
+			color: #FFF;
+			margin-right: 0;
+		}
+
+		@include atMedium {
+			width: 40%;
+		}
+
+		@include atSmall {
+			width: 100%;
+		}
+	}
+
+	a:hover {
+		background-color: #000;
+		color: #FFF;
+	}
+
+
+}
+/* End Site Navigation */

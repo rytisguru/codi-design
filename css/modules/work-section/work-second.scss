@@ -1,0 +1,25 @@
+@mixin work-second {
+	&-text-second {
+		@extend .work-content-text;
+		animation-name: textFadeInLeft;
+		margin-top: 50px;
+		margin-bottom: 25px;
+		float: right;
+		text-align: right;
+	}
+
+	&-image-big-second {
+		@extend .work-content-image-big;
+		img {
+			float: left;
+		}
+	}
+
+	&-image-small-second {
+		@extend .work-content-image-small;
+		img {
+			float: right;
+			transform-origin: 100% 0;
+		}
+	}
+}

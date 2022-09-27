@@ -1,0 +1,116 @@
+/* 3rd party packages */ 
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import "base/mixins";
+@import "base/fonts";
+@import "modules/reveal";
+@import "modules/header";
+@import "modules/footer";
+ 
+@import "modules/site-nav";
+@import "modules/work-section/work-section";
+@import "modules/contact-form";
+@import "modules/services";
+@import "modules/gallery";
+
+html {
+	line-height: 1.7;
+	scroll-behavior: smooth;
+} 
+
+body {
+	font-family: 'Comfortaa-Variable', 'VarelaRound', Arial, sans-serif;
+	font-size: 15px;
+	margin: 0; 
+	padding: 0; 
+	 -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  	scrollbar-width: none; /* for Firefox */
+  	overflow-y: scroll; 
+
+	@include atLarge {
+		font-size: 16px;
+	}
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+h1, h2, h3, h4, h5, h6, p, p.has-background {
+	margin: 0;
+	padding: 0;
+}
+
+.main-heading {
+	h1 {
+		text-align: center;
+		color: #fff;
+	}
+}
+
+.codi-page {
+	width: 100%;
+	margin-top: 150px;
+	overflow: hidden; 
+	text-align: justify;
+
+	@include defPadding;
+}
+
+.trp-flag-image {
+	width: 30px;
+
+	@include atLarge {
+		width: 40px;
+	}
+
+	@include atSmall {
+		width: 20px;
+	}
+}
+
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+.placeholder-block {
+	width: 100%;
+	text-align: center;
+	height: 50px;
+	color: #fff;
+}
+
+.scroll-block {
+	width: 100%;
+	margin-top: 150px;
+	margin-bottom: 150px;
+	overflow: hidden;
+	box-sizing: border-box;
+	text-align: justify;
+
+	@include atSmall {
+		margin-top: 25px;
+	}
+
+	@include defPadding;
+}
+
+.group:before,
+.group:after {
+	content: "";
+	display: table;
+}
+
+.group:after {
+	clear: both;
+}
+
+.group {
+	zoom: 1;
+}

@@ -1,0 +1,24 @@
+@mixin work-first {
+	&-text-first {
+		@extend .work-content-text;
+		animation-name: textFadeInRight;
+		margin-top: 50px;
+		margin-bottom: 25px;
+		float: left; 
+	}
+
+	&-image-big-first {
+		@extend .work-content-image-big;
+		img {
+			float: right;
+		}
+	}
+
+	&-image-small-first {
+		@extend .work-content-image-small;
+		img {
+			float: left;
+			transform-origin: 0 0;
+		}
+	}
+}

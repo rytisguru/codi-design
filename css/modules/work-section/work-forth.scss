@@ -1,0 +1,33 @@
+@mixin work-forth {
+	&-text-forth {
+		@extend .work-content-text;
+		animation-name: textFadeInLeft;
+		position: absolute;
+		bottom: 50px;
+		right: 0;
+		text-align: right;
+
+		@include atMedium {
+			position: static;
+			float: right;
+		}
+
+	}
+
+	&-image-big-forth {
+		@extend .work-content-image-big;
+		img {
+			float: left;
+		}
+	}
+
+	&-image-small-forth {
+		@extend .work-content-image-small;
+		img { 
+			float: right;
+			transform-origin: 100% 0;
+			margin: 5% auto;
+			box-sizing: border-box;
+		}
+	}
+}

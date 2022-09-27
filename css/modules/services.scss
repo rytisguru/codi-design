@@ -1,0 +1,48 @@
+.service-section {
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin-top: 200px;
+	overflow: hidden;
+	box-sizing: border-box;
+
+	@include defPadding;
+
+	.row {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 100px;
+	}
+
+	.box {
+		width: 30%;
+		margin-bottom: 100px;
+		box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px 0px, rgba(0, 0, 0, 0.09) 0px 4px 2px 0px, rgba(0, 0, 0, 0.09) 0px 8px 4px 0px, rgba(0, 0, 0, 0.09) 0px 16px 8px 0px, rgba(0, 0, 0, 0.09) 0px 32px 16px 0px;
+		border-radius: 20% 10%;
+
+	    &:hover {
+	    	rotate: 5deg;
+	    }
+
+		&-image {
+			img {
+				width: 25%;
+				height: auto;
+				padding-top: 25px;
+				padding-bottom: 15px;
+			}
+		}
+
+		&-text {
+			h5 {
+				padding: 10px auto;
+			}
+
+			p {
+				padding-top: 15px;
+				padding-bottom: 25px;
+			}
+		}
+	}
+}
